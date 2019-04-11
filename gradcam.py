@@ -66,7 +66,7 @@ class GradCam:
             # print(" 6. Mask Shape, Max, Min, Mean: ", np.shape(mask), np.max(mask), np.min(mask), np.mean(mask))
             if np.max(mask) != 0:
                mask = mask / np.max(mask)
-            heat_map = np.float32(cv2.applyColorMap(np.uint8(255 * mask), cv2.COLORMAP_SUMMER))
+            heat_map = np.float32(cv2.applyColorMap(np.uint8(255 * mask), cv2.COLORMAP_JET))
             plt.imshow(heat_map)
             plt.show()
             # print(" 7. Heat Map Shape, Max, Min : ", np.shape(heat_map), np.max(heat_map), np.min(heat_map),
